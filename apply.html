@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers | Skyline Airways</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">SKYLINE <span>AIRWAYS</span></a>
+    <nav><a href="index.html">Home</a><a href="flights.html">Flights</a><a class="active" href="apply.html">Careers</a></nav>
+    <a class="nav-button" href="https://www.roblox.com/" target="_blank">Roblox Group</a>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <p class="eyebrow">CAREERS</p>
+      <h1>Join the crew.</h1>
+      <p>Complete this form to apply for a role at Skyline Airways.</p>
+    </section>
+
+    <section class="form-section">
+      <form id="applicationForm">
+        <label>Roblox username<input name="username" required placeholder="Your Roblox username"></label>
+        <label>Discord username <span class="optional">(optional)</span><input name="discord" placeholder="username"></label>
+        <label>Position<select name="position" required>
+          <option value="">Choose a position</option>
+          <option>Pilot</option>
+          <option>Cabin Crew</option>
+          <option>Airport Staff</option>
+          <option>Management</option>
+        </select></label>
+        <label>Why should we choose you?<textarea name="reason" required rows="6" placeholder="Tell us about yourself..."></textarea></label>
+        <button class="button primary" type="submit">Submit application</button>
+        <p id="formMessage" class="form-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>© 2026 Skyline Airways · A Roblox community airline</footer>
+
+  <script>
+    document.getElementById("applicationForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("formMessage").textContent =
+        "Thanks! The demo form works, but it is not connected to a database yet. Connect it to a form service or your own backend before going live.";
+    });
+  </script>
+</body>
+</html>
